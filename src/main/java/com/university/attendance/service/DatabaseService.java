@@ -169,7 +169,7 @@ public class DatabaseService {
         }
     }
 
-    public List<AttendanceSession> getSessionsByDateRange(LocalDate startDate, LocalDate endDate) {
+    public List<AttendanceSession> getSessionsByDateRange(java.time.LocalDate startDate, java.time.LocalDate endDate) {
         String sql = "SELECT s.*, u.name, u.student_id " +
                      "FROM attendance_sessions s " +
                      "JOIN users u ON s.user_id = u.id " +
